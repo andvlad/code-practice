@@ -1,10 +1,10 @@
-.accordion {
+.sidemenu {
     width: 100%;
 /*
 ширина произвольная выбирается
 *в зависимости от места размещения 
 */
-    max-width: 600px;
+    max-width: 100%;
     min-height: 0;
     display: block;
 /* относительное позиционирование */
@@ -12,21 +12,21 @@
     margin: 0 auto;
     padding: 0;
     background-color: #fefffa;
-    overflow: hidden
+    overflow: hidden;
 }
 /* заголовки панелей аккордеона */
-.accordion h2 {
+.sidemenu h2 {
     font-size: 16px;
     font-weight: 300;
+    font-family: 'Forum';
     letter-spacing: 1px;
     display: block;
     margin: 0;
     padding: 10px 25px;
     cursor: pointer;
-    color: #f4f4f4;
-    background: #2d8bbb;
-    border-top: 1px solid #3face4;
-    border-bottom: 1px solid #2479a5;
+    color: black;
+    background: linear-gradient(to top, #fff,  #ededed);
+    border-bottom: 1px solid grey;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -34,11 +34,10 @@
 /* заголовки панелей аккордеона при наведении
 * в данном варианте не срабатывает
 */
-/* .accordion h2:hover {
-    display: block;
-    background-color: #005049;
+.sidemenu h2:hover {
+    background: linear-gradient(to top, #dcdcdc, #fff);
 }
-*/
+
  
 /* Формируем блоки с содерханием */
 .msg {
@@ -60,7 +59,7 @@
  
 /* Позаботимся о небольших экранах 
 @media (max-width: 550px) {
-  .accordion {
+  .sidemenu {
     box-sizing: border-box;
     transform: translate(0, 0);
     max-width: 100%;
@@ -71,7 +70,7 @@
 } */
  
 /* Формируем неупорядоченный список */
-.accordion ul {
+.sidemenu ul {
   list-style: none;
   perspective: 900;
   padding: 0;
@@ -82,7 +81,7 @@
  * в который поместим скрытый флажек,
  * заголовок панелей и блок с содержанием
 */
-.accordion ul li {
+.sidemenu ul li {
   position: relative;
   padding: 0;
   margin: 0;
@@ -91,21 +90,21 @@
 /* устанавливаем время ожидания перед воспроизведением анимации 
  * на основе нумерации в дереве элементов
 */
-.accordion ul li:nth-of-type(1) {
+.sidemenu ul li:nth-of-type(1) {
   animation-delay: 0.5s;
 }
-.accordion ul li:nth-of-type(2) {
+.sidemenu ul li:nth-of-type(2) {
   animation-delay: 0.75s;
 }
-.accordion ul li:nth-of-type(3) {
+.sidemenu ul li:nth-of-type(3) {
   animation-delay: 1s;
 }
-.accordion ul li:last-of-type {
+.sidemenu ul li:last-of-type {
   padding-bottom: 0;
 }
  
 /* Сформируем  указатель переключения состояния аккордеона */
-.accordion ul li i {
+.sidemenu ul li i {
   position: absolute;
   transform: translate(-6px, 0);
   margin-top: 16px;
@@ -114,23 +113,23 @@
 }
  
 /* "Рисуем " сам указатель */
-.accordion ul li i:before, .accordion ul li i:after {
+.sidemenu ul li i:before, .sidemenu ul li i:after {
   content: "";
   position: absolute;
-  background-color: #eee;
+  background-color: grey;
   width: 3px;
   height: 9px;
 }
 /* Добавляем элемент трансформации указателя при переключении */
-.accordion ul li i:before {
+.sidemenu ul li i:before {
   transform: translate(-2px, 0) rotate(45deg);
 }
-.accordion ul li i:after {
+.sidemenu ul li i:after {
   transform: translate(2px, 0) rotate(-45deg);
 }
  
 /* Делаем чекбокс скрытым*/
-.accordion ul li input[type=checkbox] {
+.sidemenu ul li input[type=checkbox] {
   position: absolute;
   cursor: pointer;
   width: 100%;
@@ -142,17 +141,17 @@
 /* Когда у флажка установлен checked  
  * блок с содержанием скрыт
 */
-.accordion ul li input[type=checkbox]:checked ~ div.msg {
+.sidemenu ul li input[type=checkbox]:checked ~ div.msg {
   margin-top: 0;
   max-height: 0;
   opacity: 0;
   transform: translate(0, 50%);
 }
 /* А указатель показывает вниз */
-.accordion ul li input[type=checkbox]:checked ~ i:before {
+.sidemenu ul li input[type=checkbox]:checked ~ i:before {
   transform: translate(2px, 0) rotate(45deg);
 }
-.accordion ul li input[type=checkbox]:checked ~ i:after {
+.sidemenu ul li input[type=checkbox]:checked ~ i:after {
   transform: translate(-2px, 0) rotate(-45deg);
 }
 /*  Устанавливаем эффект перехода
@@ -165,7 +164,7 @@ div.msg, ul li i:before, ul li i:after {
  * Изображения внутри аккордеона
  * ...сделаем их отзывчивыми
  */
-.accordion .msg img {
+.sidemenu .msg img {
     width: 100%;
     height: auto;
     -moz-box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
