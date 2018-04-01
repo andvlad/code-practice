@@ -1,0 +1,133 @@
+/* формируем тело кнопки, положение и эффект перехода */
+ 
+.scrollTop {
+/* по-умолчанию скрыта */
+    display: none;
+/* скругяем углы */
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    border-radius: 100%;
+/* фиксируем позицию кнопки */
+    position: fixed;
+/* размеры кнопки */   
+    width: 60px;
+    height: 60px;
+/* положение кнопки */
+    right: 1rem;
+    bottom: 1rem;
+/* вид курсора */
+    cursor: pointer;
+/* эффект перехода между двумя состояниями кнопки */
+    -webkit-transition: bottom 0.2s cubic-bezier(0.42, 0, 0.58, 1);
+    -moz-transition: bottom 0.2s cubic-bezier(0.42, 0, 0.58, 1);
+    -ms-transition: bottom 0.2s cubic-bezier(0.42, 0, 0.58, 1);
+    -o-transition: bottom 0.2s cubic-bezier(0.42, 0, 0.58, 1);
+    transition: bottom 0.2s cubic-bezier(0.42, 0, 0.58, 1)
+}
+/* смещение кнопки вверх при наведении */
+ 
+.scrollTop:hover {
+    bottom: 2rem
+}
+ 
+/* дополнительные элементы офрмления кнопки */
+ 
+.scrollTop:before,
+.scrollTop:after {
+    content: "";
+    top: 0;
+    left: 0;
+    background-color: #766DCC;
+    width: 60px;
+    height: 60px;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    border-radius: 100%;
+    -webkit-animation-fill-mode: both;
+    -moz-animation-fill-mode: both;
+    animation-fill-mode: both;
+    position: absolute;
+    opacity: 0;
+}
+ 
+/* определяем имя, тип и скорость анимации лля :before */
+.scrollTop:before {
+    background-color: #736cad;
+    -webkit-animation: clickMe 1.8s 333ms infinite ease-out;
+    -moz-animation: clickMe 1.8s 333ms infinite ease-out;
+    animation: clickMe 1.8s 333ms infinite ease-out
+}
+ 
+/* определяем имя, тип и скорость анимации лля :after */
+.scrollTop:after {
+    -webkit-animation: clickMe 1.8s 777ms infinite ease-out;
+    -moz-animation: clickMe 1.8s 777ms infinite ease-out;
+    animation: clickMe 1.8s 777ms infinite ease-out
+ }
+ 
+/* формируем вид иконки */
+.scrollTop i {
+    width: 30px;
+    height: 30px;
+    display: block;
+    background: rgba(28, 144, 243, 0.61);
+    color: #fff;
+    text-align: center;
+    line-height: 30px;
+    font-size: 1.3rem;
+    background-size: 12px;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    border-radius: 100%;
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    z-index: 100
+}
+ 
+/* анимация */
+ @-webkit-keyframes clickMe {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale(0)
+    }
+    5% {
+        opacity: 1
+    }
+    100% {
+        opacity: 0
+    }
+ }
+ 
+ @-moz-keyframes clickMe {
+    0% {
+       opacity: 0;
+       -moz-transform: scale(0)
+    }
+    5% {
+       opacity: 1
+    }
+    100% {
+        opacity: 0
+    }
+ }
+ 
+ @keyframes clickMe {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale(0);
+        -moz-transform: scale(0);
+        -ms-transform: scale(0);
+        -o-transform: scale(0);
+        transform: scale(0)
+    }
+    5% {
+        opacity: 1
+    }
+    100% {
+        opacity: 0
+    }
+ }

@@ -1,0 +1,152 @@
+button {
+  margin: 30px 20px;
+  padding: 15px 20px;
+  border-radius: 10px;
+  border: 2px solid;
+  font: 16px 'Open Sans', sans-serif;
+  text-transform: uppercase;
+  background: none;
+  outline: none;
+  cursor: pointer;
+  transition: all .5s;
+}
+.btn-1 {
+  color: #53CDD8;
+  border-color: #53CDD8;
+  position: relative;
+  overflow: hidden;}
+  .btn-1:before {
+    content: "";
+    background-color: #53CDD8;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    right: -30px;
+    height: 100%;
+    width: 0;
+    transform: skew(45deg, 0);
+    transition: all .5s;
+  }
+  .btn-1:hover {
+    color: #27323A;}
+    .btn-1:hover:before {
+      width: 150%;
+    }
+
+  section{
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    width:100%;
+    min-height:100%;
+    margin-bottom:3rem;}
+    section button{
+      align-self:center;
+      background:transparent;
+      padding:1rem 1rem;
+      margin:0 1rem;
+      transition:all .5s ease;
+      color:#41403E;
+      font-size:2rem;
+      letter-spacing:1px;
+      outline:none;
+      box-shadow: 20px 38px 34px -26px hsla(0,0%,0%,.2);
+      border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;}
+       section button:hover{
+         box-shadow:2px 8px 4px -6px hsla(0,0%,0%,.3);
+      } 
+      section button:hover.lined.thick{
+         border:solid 7px #41403E;
+      }
+      section button:hover.dotted.thick{
+         border:dotted 5px #41403E;
+      }
+      section button:hover.dashed.thick{
+        border:dashed 5px #41403E;
+      }
+       section button:hover.lined.thin{
+         border:solid 2px #41403E;
+      }
+      section button:hover.dotted.thin{
+         border:dotted 2px #41403E;
+      }
+      section button:hover.dashed.thin{
+        border:dashed 2px #41403E;
+      }
+    
+  /**,
+  *:before,
+  *:after {
+    box-sizing: border-box;
+    transition: 0.5s ease-in-out;
+  }*/
+
+  .btn-6 i,em,
+  b,strong,
+  span {
+    transition: none;
+  }
+
+
+.btn-6:before,
+.btn-6:after {
+  z-index: -1;
+}
+
+.btn-6 h1,
+h4 {
+  font-family: 'Raleway', 'Open Sans', sans-serif;
+  margin: 0;
+  line-height: 1;
+}
+
+.btn-6 a {
+  text-decoration: none;
+  line-height: 80px;
+  color: black;
+}
+
+.centerer {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 1rem
+}
+
+.btn-6 {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  @include size(100%, 80px);
+  max-width: 250px;
+  margin: 1rem auto;
+  text-transform: uppercase;
+  border: 1px solid currentColor;
+}
+.btn-6 {
+  color: #eeeeee;
+  $btn-color-dark: shade($btn-color, 40%);
+	color: tint($btn-color);
+  }
+  span {
+    @include absolute();
+    display: block;
+    @include size(0);
+    border-radius: 50%;
+    background-color: #eeeeee;
+    transition: width 0.4s ease-in-out, height 0.4s ease-in-out;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+  }
+  
+  span:hover {
+    color: tint(#eeeeee, 75%);}
+    
+    span:hover > span {
+      @include size(225%, 562px);
+    }
+  
+  
+  span:hover > span:active {
+    background-color: #eeeeee;
+  }
