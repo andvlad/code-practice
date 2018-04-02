@@ -27,7 +27,7 @@
           <a href="logout.php">Выход</a>
         </div>
       <?php } ?> 
-      <p id="toptext">Владислав Андрюшин</p>
+      <p id="toptext">Web-разработка</p>
     </div>
 
     <div class="mainmenu">

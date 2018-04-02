@@ -45,8 +45,7 @@
       <label><input type="checkbox" name="document" value="yes">Я прочитал соглашение</label>
       <p><input type="submit" value="Отправить"></p>
       <input type="reset" value="Очистить">
-      <button class="btn-1">Button 1</button>
-      <section><button class='dotted thick'>Dotted Thick</button></section>
+
     </form>
     <?php require_once("poll.php"); ?>
       <?php require_once("sidemenu.php"); ?>
