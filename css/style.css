@@ -4,19 +4,16 @@
 @import url('https://fonts.googleapis.com/css?family=Kurale&subset=cyrillic,cyrillic-ext');
 @import url('https://fonts.googleapis.com/css?family=Forum');
 @import url("buttons.css");
-@import url("reset.css");
 @import url("style_popup.css");
-@import url("poll.css");
-@import url("sidemenu.css");
 @import url("ontop.css");
-
-/* {
-  transition: 0.3s;
-}*/
+@import url("sidemenu.css");
+@import url("contact.css");
 
 .top {
-	background: #34495E;
-	height: 25vh;
+	left: 0;
+	right: 0;
+	background: linear-gradient(to top, #344969, #34495E);
+	height: 20vh;
 	width: 100%;
 }
 #toptext {
@@ -24,15 +21,33 @@
 	color: #F5FFFA;
 	text-align: center;
 	letter-spacing: 1vw;
- 	padding-top: 10vh;
- 	margin-top: 0px
+	transform: translate(0, 50%);
+ 	vertical-align: middle;
+ 	margin-top: 0px;
+}
+.bottom {
+	bottom: 0;
+	background: linear-gradient(to bottom, #344969, #34495E);
+	height: auto;
+	width: 100%;
 }
 #bottomtext {
-	font: bold 10vh 'Yanone Kaffeesatz';
+	font: 2vh 'Forum';
 	color: #F5FFFA;
+	float: left;
 	text-align: center;
- 	padding-top: 100px;
- 	margin-top: 0px
+	text-decoration: none;
+ 	padding: 1vw 1vw 1vw 1vw;
+ 	margin: 15vh 0 0 30vw;
+}
+.reg {
+	top: 0;
+	left: 0;
+	background-color: #34495E;
+	height: 5vh;
+	width: 100%;
+	position: fixed;
+	z-index: 100;
 }
 .reg > a {
 	float: left;
@@ -43,12 +58,12 @@
 	transition: 0.3s;
 }
 .reg a:first-child {
-	padding: 1em;
-	margin: 1% 5% 0 40%
+	padding: 1vh;
+	margin: .5vh 5% 0 40%
 }
 .reg a:last-child {
-	padding: 1em;
-	margin: 1% 0 0 0
+	padding: 1vh;
+	margin: .5vh 0 0 0
 }
 .reg a:hover {
 	box-shadow: inset 0 0 0 0.1em #F5FFFA;
@@ -58,7 +73,7 @@
     transition-duration: 0s;
 }
 .mainmenu > a {
-	background: #34495E;
+	background: #344969;
 	float: left;
 	height: 6vh;
 	width: 20%;
@@ -130,49 +145,4 @@
 }
 .text p:not(:first-child) {
 	text-indent: 50px;
-}
-
-#wind {
-    position: absolute;
-    width:320px;
-    left: 35%;
-    top: 100px;
-    border:solid #105a98 4px;
-    display: none;
-    z-index: 10;
-    overflow: hidden;
-    background-color:#348c03;
-    color:#fff;
-    text-align:center;
-    padding:10px;
-}
-/*body{
-  background: gray;
-  color: white;
-  font-size: 48px;
-  text-shadow: 4px 4px 4px #aaa;
-}
-font-weight: bold;
-	font-family: 'Philosopher', sans-serif;
-	font-size: 100px;
-h1{color:#0085cc;}
-h2{color:white;}
-p{ color:black; }*/
-p strong{ color:blue;}
-/*@font-face {
-font-family: namefont;
-src: local("namefont"),
-url: (font/namefont.ttf);
-}*/
-.block {
-  background: #f1f1f1 url("background.jpg") repeat-x scroll 100px 125px;
-}
-.info {
-  max-height: 360px; /* максимальная высота блока */
-  min-height: 120px; /* минимальная высота блока */
-}
-#wrapper {
-  position: relative;
-  bottom: 15px; /* смещен на 15px от низа */
-  left: 30px; /* смещен на 30px слева */
 }
