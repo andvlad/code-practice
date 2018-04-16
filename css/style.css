@@ -8,6 +8,8 @@
 @import url("ontop.css");
 @import url("sidemenu.css");
 @import url("contact.css");
+@import url("dropmenu.css");
+@import url("slide.css");
 
 .top {
 	left: 0;
@@ -39,6 +41,31 @@
 	text-decoration: none;
  	padding: 1vw 1vw 1vw 1vw;
  	margin: 15vh 0 0 30vw;
+}
+.ref {
+	text-decoration: none;
+ text-align: center;
+ display: inline-block;
+ background-image: linear-gradient(to left,transparent,transparent 50%, #34495E 50%, #34495E);
+ background-position: 100% 0;
+ background-size: 200% 100%;
+ transition: all .25s ease-in;
+ font: 500 3vh 'Forum';
+ border-bottom: 2px solid #34495E;
+}
+.ref:hover {
+background-position: 0 0;
+color: white;
+}
+.ref:visited {
+	color: #AA0000;
+	border-color: #AA0000;
+}
+.ref:visited:hover {
+background-position: 0 0;
+color: white;
+color: white;
+	border-color: #34495E;
 }
 .reg {
 	top: 0;
@@ -112,6 +139,12 @@
 }
 .sidebar > form {
 	padding: 0 10% 0 5%;
+}
+img {
+	width: 15%;
+	height: 15%;
+	float: right;
+	margin: 0 0 1em 1em;
 }
 .info {
 	font: 20px 'Kurale';

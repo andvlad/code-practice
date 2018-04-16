@@ -10,15 +10,15 @@
     <meta content='yes' name='apple-mobile-web-app-capable'/>
     <title>Mein Seit</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet/less" type="text/css" href="styles.less" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!--<script src="js/jquery-3.3.1.js"></script>
     <script src="js/jquery-3.3.1.min.js"></script>-->
     <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.0.0/less.min.js" ></script>
   </head>
 
   <body>
+
+    <?php require_once("slide.html"); ?>
 
     <div class="top">
       <?php  if(!isset($_SESSION['email']) && !isset($_SESSION['password'])){
