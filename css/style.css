@@ -11,6 +11,9 @@
 @import url("dropmenu.css");
 @import url("slidemenu.css");
 @import url("slider.css");
+@import url("search.css");
+@import url("bread.css");
+@import url("fileinput.css");
 
 .top {
 	left: 0;
@@ -89,7 +92,7 @@ color: white;
 	padding: 1vh;
 	margin: .5vh 5% 0 40%
 }
-.reg a:last-child {
+.reg a:nth-child(2) {
 	padding: 1vh;
 	margin: .5vh 0 0 0
 }
@@ -193,3 +196,7 @@ color: white;
 .text p:not(:first-child) {
 	text-indent: 50px;
 }
+#header{text-align:right; display:none;}
+#header{color:#ccc;}
+#header a{color:#fff;}
+#header a:hover{color:#666;}

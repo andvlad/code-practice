@@ -5,6 +5,14 @@
 <?php require_once("slider.html"); ?>
 
     <div class="info">
+
+      <ul id="breadcrumbs-one">
+        <li><a href="">Code Practice</a></li>
+        <li><a href="">Скрипты</a></li>
+        <li><a href="">Меню и навигация</a></li>
+        <li><a href="" class="current">HTML</a></li>
+      </ul>
+      
       <div class="text">
         <a href="#img7"><img class="img1" src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" class="img-right" alt="Логотип HTML5"></a>
         <a href="#close" class="lightbox" id="img7"><img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg"></a>

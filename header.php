@@ -28,7 +28,11 @@
           <a href="index.php"><?php printf ($_SESSION['login']); ?></a>
           <a href="logout.php">Выход</a>
         </div>
-      <?php } ?> 
+      <?php } ?>
+      <form>
+        <input placeholder="Поиск" type="search">
+      </form>
+
       <p id="toptext">Web-разработка</p>
     </div>
 
