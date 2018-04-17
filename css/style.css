@@ -9,7 +9,8 @@
 @import url("sidemenu.css");
 @import url("contact.css");
 @import url("dropmenu.css");
-@import url("slide.css");
+@import url("slidemenu.css");
+@import url("slider.css");
 
 .top {
 	left: 0;
@@ -137,10 +138,15 @@ color: white;
 	box-sizing: border-box;
 	width: 30%;
 }
+.wrap {
+	width: 48vw;
+	display: block;
+	margin: 5% 0 5% 10%;
+}
 .sidebar > form {
 	padding: 0 10% 0 5%;
 }
-img {
+.img1 {
 	width: 15%;
 	height: 15%;
 	float: right;
@@ -156,7 +162,7 @@ img {
 	display: table;
     width: 100%;
     box-sizing: border-box;
-    margin: 10% 0 10% 0;
+    margin: 5% 0 10% 0;
 }
 .container > div,
 .container > noindex > div {
@@ -164,6 +170,14 @@ img {
     vertical-align: top;
     width: auto;
     box-sizing: border-box;
+}
+.container > .slider,
+.container > noindex > .slider {
+	display: table-cell;
+    max-width: 960px;
+    min-width: 960px;
+    width: 960px;
+    overflow: hidden;
 }
 .container > .sidebar,
 .container > noindex > .sidebar {

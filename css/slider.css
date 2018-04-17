@@ -1,0 +1,145 @@
+
+.slider {
+float: left;
+width: 100%;
+height: 540px;
+position: relative;
+margin: 0 0 5% 15%;
+}
+
+.sliderContent {
+float: left;
+width: 100%;
+height: 540px;
+clear: both;
+position: relative;
+overflow: hidden;
+}
+
+.sliderArrows a {
+display: block;
+text-indent: -9999px;
+outline: none;
+z-index: 50;
+background-image: url(../gfx/prev_next.png);
+width: 42px;
+height: 42px;
+position: absolute;
+top: 50%;
+margin-top: -34px;
+}
+
+.prev {
+background-position: 0 0;
+left: 15px;
+}
+
+.prev:hover {
+background-position: 0 -44px;
+}
+
+.next {
+right: 15px;
+background-position: -44px 0;
+}
+
+.next:hover {
+background-position: -44px -44px;
+}
+
+.sliderContent .item {
+position: absolute;
+width: 100%;
+height: auto;
+background: #fff;
+}
+
+.sliderBullets {
+position: absolute;
+bottom: 1vh;
+opacity: 0.5;
+left: 50%;
+z-index: 50;
+margin-left: -45px;
+}
+
+.sliderBullets a {
+display: block;
+float: left;
+text-indent: -9999px;
+outline: none;
+margin-left: 5px;
+width: 10px;
+height: 11px;
+background: url(../gfx/bullets.png) no-repeat;
+}
+
+.sliderBullets .active {
+background-position: 0 -11px;
+}
+
+.sliderBullets:hover {
+	transition: .3s;
+opacity: 0.8;
+}
+
+.sliderBullets:not(:hover) {
+	transition: .3s;
+opacity: 0.5;
+}
+
+.sliderContent a {
+outline: none;
+}
+
+a {
+color: #fff;
+}
+
+a img {
+border: none;
+}
+
+.lightbox {
+/** определяем базовый стиль lightbox */
+  position: fixed;
+  overflow: hidden;
+  z-index: 9999;
+  width: 0;
+  height: 0;
+  text-align: center;
+  top: 0;
+  left: 0;
+  background: rgba(0,0,0,0.8);
+}
+.lightbox img {
+/** базовый стиль изображений lightbox*/
+  width: 90%;
+  max-width: 90%;
+  height: 90%;
+  padding: 2.5% 2.5% 2.5% 2.5%;
+/** полная прозрачность изначально */
+  opacity: 0;
+  border: 1px solid #4D4D4D;
+/** тени у картинок - это по желанию */
+  -moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
+  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
+/* трансформация прозрачности при открытии  */
+  -webkit-transition: opacity 500ms ease-in;
+  -moz-transition: opacity 500ms ease-in;
+  transition: opacity 500ms ease-in;  
+}
+.lightbox:target {
+/** активируем lightbox при нажатии */
+  width: auto;
+  height: auto;
+  bottom: 0;
+  right: 0;
+/** удаляем контур по умолчанию */
+  outline: none;
+}
+.lightbox:target img {
+/** делаем элемент непрозрачным  */
+  opacity: 1;
+}

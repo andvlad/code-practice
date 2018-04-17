@@ -18,7 +18,7 @@
 
   <body>
 
-    <?php require_once("slide.html"); ?>
+    <?php require_once("slidemenu.html"); ?>
 
     <div class="top">
       <?php  if(!isset($_SESSION['email']) && !isset($_SESSION['password'])){
