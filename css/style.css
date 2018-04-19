@@ -15,6 +15,29 @@
 @import url("bread.css");
 @import url("fileinput.css");
 
+.wr {
+	display: grid;
+}
+header {
+	grid-area: header;
+}
+.main {
+	grid-area: main;
+}
+aside {
+	grid-area: sidebar;
+}
+.footer {
+	grid-area: footer;
+}
+.wr {
+	grid-template-columns: 5fr 2fr;
+  grid-template-rows: auto;
+  grid-template-areas: 
+    "header header"
+    "main sidebar"
+    "footer footer";
+}
 .top {
 	left: 0;
 	right: 0;
