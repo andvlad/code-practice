@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+   <head>
+      <meta charset="utf-8"/>
+      <meta name='viewport' content='width=device-width,initial-scale=1'/>
+      <meta content='true' name='HandheldFriendly'/>
+      <meta content='width' name='MobileOptimized'/>
+      <meta content='yes' name='apple-mobile-web-app-capable'/>
+      <title>Морской бой</title>
+      <link rel="stylesheet" type="text/css" href="css/style.css">
+      <link rel="stylesheet" type="text/css" href="css/alertify.min.css">
+      <link rel="stylesheet" href="css/default.min.css" />
+      <script src="js/alertify.min.js"></script>
+      <script src="js/engine.js"></script>
+   </head>
+
+   <body>
+      <!-- Окно ввода имени игрока -->
+      <script>
+         /*if (getCookie(username) === null || getCookie(username) === undefined) {
+            var username = prompt( 'Пожалуйста, назовите себя', 'Игрок' );
+            setCookie(username)
+         }*/
+         var username = prompt( 'Пожалуйста, назовите себя', 'Игрок' );
+         var st = '<p class="header">';
+      </script>
+
+      <div id='title'>Морской бой</div>
+
+      <table>
+
+         <tr>
+            <!--  Подписи полей компьютера и игрока.
+                  Если игрок не ввел свое имя, показать имя по умолчанию-->
+            <td><p class='header'>Противник</p></td>
+            <td class="spacer" rowspan="3"></td>
+            <td id="name">
+               <script>
+                  if ( username === null || username === '' || username=== undefined ) {
+                     document.getElementById("name").innerHTML = st + 'Игрок</p>';
+                  } else {
+                     document.getElementById("name").innerHTML = st + username + '</p>';}
+               </script>
+            </td>
+         </tr>
+
+         <tr>
+            <!-- Поле компьютера -->
+            <td class='bf'>
+               <script>
+                  showGrid(true);
+               </script>
+            </td>
+            <!-- Поле игрока -->
+            <td class='bf'>
+               <script>
+                  showGrid(false);
+               </script>
+            </td>
+         </tr>
+      </table>
+      <!-- Поле вывода интерактивных сообщений -->
+      <input type="text" id="messenger" alt="" />
+      <!-- Сообщение по умолчанию -->
+      <script>
+         document.getElementById('messenger').value = " Добро пожаловать в игру ";
+      </script>
+      <!-- Поле с коротким описанием -->
+      <div id="info"><p>Стреляйте, кликая по клеткам поля противника.</p><p>Потопите все корабли противника прежде, чем он потопит Ваши.</p><br /><br /></div>
+      <!-- Кнопка начала новой игры -->
+      <button onClick="Javascript:resetGame()" id="button">Новая игра</button>
+
+   </body>
+</html>

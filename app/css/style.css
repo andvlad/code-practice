@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css?family=Forum');
+@import url('https://fonts.googleapis.com/css?family=Alegreya+Sans:400,700&subset=cyrillic,cyrillic-ext,latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Kurale&subset=cyrillic,cyrillic-ext');
+
+body {background: #f8f8ff;}
+#title {
+	font: 600 35px 'Alegreya Sans';
+	padding-top: 10px;
+	color: #2d7299;
+	letter-spacing: 3px;
+	text-align: center;
+}
+#messenger {
+	font: 30px 'Kurale';
+	width: 800px;
+	color: #2d7299;
+	text-align: center;
+	margin: 0 0 0 50%;
+	transform: translateX(-50%);
+	border: none;
+	background-color: #f8f8ff;
+}
+table {
+	width: 800px;
+	border-collapse: separate;
+	margin: 0 10px 10px 50vw;
+	transform: translateX(-50%);
+	padding: 10px;
+}
+td {
+	width: 330px;
+	margin: 0px;
+	line-height: 0;
+}
+tr .bf {
+	background: white;
+}
+.spacer {width: auto;}
+#info {
+	font: 20px 'Kurale';
+	text-align: center;
+	margin: auto;
+	color: #2d7299;
+}
+.header {
+	font: bold 25px 'Forum';
+	text-align: center;
+	color: #2d7299;
+}
+#button {
+    text-decoration: none;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #F5FFFA;
+    font: bold 25px 'Alegreya Sans';
+    letter-spacing: 3px;
+    padding: 12px 20px;
+    background: #2a55b5;
+    box-shadow: 0 5px 5px #364a8e, 0 9px 0 #25325e, 0px 9px 10px rgba(0,0,0,0.4), inset 0px 2px 9px rgba(255,255,255,0.2), inset 0 -2px 9px rgba(0,0,0,0.2);
+	position: relative;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    display: inline-block;
+    border-radius: 10px;
+    cursor: pointer;
+}
+#button:hover {
+	top: 0;
+    box-shadow: 0 5px 5px #364a8e, 0 9px 0 #25325e, 0px 9px 10px rgba(0,0,0,0.4), inset 0px 2px 15px rgba(255,255,255,0.4), inset 0 -2px 9px rgba(0,0,0,0.2);
+}
+#button:active {
+	top: 7px;
+    box-shadow: 0 2px 0 #25325e, 0px 4px 4px rgba(0,0,0,0.3), inset 0px 2px 5px rgba(0,0,0,0.2);
+}
